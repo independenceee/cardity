@@ -5,7 +5,6 @@ RUN bun install
 COPY . .
 RUN bunx prisma generate
 RUN bun run build
-ENV NODE_ENV=production
 ENV PORT=3000
 EXPOSE 3000
 CMD ["bun", "run", "start"]
